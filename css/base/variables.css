@@ -1,0 +1,67 @@
+:root{
+    --font-family-base: 'Inter', system-ui, Arial, sans-serif;
+    --font-family-mono: 'JetBrains Mono', ui-monospace, "Liberation Mono", monospace;
+
+    --font-h1-size: 32px;
+    --font-h1-weight: 700;
+    --font-h1-line: 120%;
+
+    --font-h2-size: 24px;
+    --font-h2-weight: 600;
+    --font-h2-line: 120%;
+
+    --font-h3-size: 18px;
+    --font-h3-weight: 600;
+    --font-h3-line: 130%;
+
+    --font-body-size: 16px;
+    --font-body-weight: 400;
+    --font-body-line: 150%;
+
+    --font-body-accent-size: 16px;
+    --font-body-accent-weight: 500;
+    --font-body-accent-line: 150%;
+
+    --font-caption-size: 12px;
+    --font-caption-weight: 400;
+    --font-caption-line: 140%;
+
+    --font-mono-size: 14px;
+    --font-mono-weight: 400;
+    --font-mono-line: 150%;
+
+    --radius-xs: 4px;
+    --radius-s: 8px;
+    --radius-m: 12px;
+    --radius-l: 16px;
+
+    --shadow-e1: 0 2px 8px rgba(0, 0, 0, 0.10);
+    --shadow-e2: 0 4px 16px rgba(0, 0, 0, 0.12);
+    --shadow-e3: 0 8px 24px rgba(0, 0, 0, 0.14);
+
+    --color-main: #3B82F6;
+    --color-background: #F9FAFB;
+    --color-surface: #fff;
+    --color-text-main: #111827;
+    --color-text-secondary: #6B7280;
+    --color-error: #EF4444;
+    --color-success: #10B981;
+    --color-border: #E5E7EB;
+
+    --grid-desktor-columns: 12;
+    --grid-desktop-gutter: 24px;
+    --grid-desktop-margin: 64px;
+
+    --grig-tablet-columns: 8;
+    --grig-tablet-gutter: 20px;
+    --grig-tablet-margin: 32px;
+
+    --grid-mobile-columns: 4;
+    --grid-mobile-gutter: 16px;
+    --grid-mobile-margin: 16px;
+
+    --footer-height: 72px;
+    --footer-height-desktop: 72px;
+    --footer-height-tablet: 64px;
+    --footer-height-mobile: 64px;
+}

@@ -2,15 +2,50 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Генератор квизов</title>
-    <link
-      rel="stylesheet"
-      href="./css/pages/index.css" />
+    <link rel="stylesheet" href="./css/pages/index.css" />
+    <link rel="stylesheet" href="./css/base/base.css"/>
+    <link rel="stylesheet" href="./css/components/index.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap"
+          rel="stylesheet"/>
   </head>
   <body>
+  <div class="page">
+
+    <header class="header">
+      <a class="header header-logo" href="/">
+        <img src="assets/logo.svg" alt="logo"/>
+      </a>
+      <button class="button button-secondary">Посмотреть сохранённые квизы</button>
+    </header>
+
+    <main class="main">
+      <section class="generator">
+
+        <div class="generator-heading">
+          <h1 class="generator-title">Генератор квизов</h1>
+          <p class="generator-subtitle">Вставьте JSON...</p>
+        </div>
+
+        <form name="json-block" class="generator-form">
+          <label class="generator-form-label">
+            <span class="caption">Ваш JSON</span>
+            <textarea name="json-block-input" class="generator-input" rows="10" cols="50" placeholder="{
+«title»: «Placeholder»,
+«questions»: []
+}"></textarea>
+          </label>
+          <button class="button button-primary" type="submit">Сгенерировать</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      Учебный проект 2025
+    </footer>
+
+  </div>
     <script
       type="module"
       src="./js/pages/main.js"></script>
