@@ -7,3 +7,61 @@
     grid-area: main;
     gap: 32px;
 }
+
+.generator-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.generator-title {}
+
+.generator-subtitle {
+    color: var(--color-text-secondary);
+}
+
+.generator-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+}
+
+.generator-form-label {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    color: var(--color-text-secondary);
+}
+
+.generator-form-label span {
+    padding: 0 12px;
+}
+
+.generator-input {
+    resize: none;
+    box-sizing: border-box;
+    padding: 12px;
+    border: 1px solid transparent;
+    border-radius: var(--radius-xs);
+    box-shadow: var(--shadow-e1);
+}
+
+.generator-input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.generator-input:focus-visible {outline: none;
+    border: solid 1px var(--color-main);
+    box-shadow: var(--shadow-e2);
+}
+
+.generator-input-error {
+    border: solid 1px var(--color-error);
+    box-shadow: var(--shadow-e2);
+}
+
+.generator-submit {
+    align-self: start;
+}

@@ -6,11 +6,40 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0" />
     <title>Ваши квизы</title>
-    <link
-      rel="stylesheet"
-      href="./css/pages/quizzes.css" />
+    <link rel="stylesheet" href="./css/pages/quizzes.css" />
+    <link rel="stylesheet" href="./css/base/base.css"/>
+    <link rel="stylesheet" href="./css/components/index.css"/>
   </head>
   <body>
+  <div class="page">
+
+    <header class="header">
+      <a class="header header-logo" href="/">
+        <img src="assets/logo.svg" alt="logo"/>
+      </a>
+      <button class="button button-primary">Добавить квиз</button>
+    </header>
+
+    <main class="main">
+      <section class="quizzes">
+
+      </section>
+    </main>
+
+    <footer class="footer">
+      Учебный проект 2025
+    </footer>
+
+  </div>
+  <template id="quiz-empty">
+
+  </template>
+  <template id="quizzes-list">
+
+  </template>
+  <template id="quiz-template">
+
+  </template>
     <script
       type="module"
       src="./js/pages/quizzes.js"></script>
