@@ -12,33 +12,44 @@
   </head>
   <body>
   <div class="page">
-
     <header class="header">
       <a class="header header-logo" href="/">
         <img src="assets/logo.svg" alt="logo"/>
       </a>
-      <button class="button button-primary">Добавить квиз</button>
+      <nav class="header__nav"></nav>
     </header>
-
     <main class="main">
-      <section class="quizzes">
-
-      </section>
+      <section class="quizzes"></section>
     </main>
-
     <footer class="footer">
-      Учебный проект 2025
+      Учебный проект 2026
     </footer>
-
   </div>
   <template id="quiz-empty">
-
+    <div class="quiz-empty">
+      <h1 class="quiz-empty__title">У вас нет сохранённых квизов(</h1>
+      <p class="quiz-empty__subtitle caption">Но вы можете добавить!</p>
+      <a class="button button-primary quiz-empty__action" href="index.html">Добавить квиз</a>
+    </div>
   </template>
   <template id="quizzes-list">
-
+    <header class="quizzes-list__header">
+      <h1 class="quizzes-list__title">Ваши квизы</h1>
+    </header>
+    <div class="quizzes-list"></div>
   </template>
-  <template id="quiz-template">
-
+  <template id="quiz-card">
+    <article class="quiz-card">
+      <h3 class="quiz-card__title">Основы JavaScript</h3>
+      <p class="quiz-card__description">
+        Проверьте, насколько хорошо вы разбираетесь в базовых концепциях JS:
+        типы данных, функции, область видимости и замыкания.
+      </p>
+      <div class="quiz-card__footer">
+        <span class="quiz-card__questions">10 вопросов</span>
+        <a class="button button-link quiz-card__pass">Пройти</a>
+      </div>
+    </article>
   </template>
     <script
       type="module"

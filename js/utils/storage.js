@@ -10,7 +10,7 @@ export const dbPromise = IndexedDB.open(QUIZZES_DB_NAME, QUIZZES_DB_VERSION, (db
 
 export async function addQuiz(quiz) {
     const db = await dbPromise;
-    return db.post(QUIZZES_ENTITY, {id: nanoid(), ...quiz});
+    return db.put(QUIZZES_ENTITY, {id: nanoid(), ...quiz});
 }
 
 export async function getQuiz(id) {

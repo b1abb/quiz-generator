@@ -33,12 +33,12 @@ export class IndexedDB {
         return this.#db.getAll(collection);
     }
 
-    post(collection, key, value) {
+    put(collection, key, value) {
         this.#initializationDB();
         if (key !== undefined) {
-            this.#db.set(collection, key, value);
+            this.#db.put(collection, key, value);
         } else {
-            this.#db.set(collection, value);
+            this.#db.put(collection, value);
         }
     }
 
