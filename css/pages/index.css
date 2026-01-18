@@ -67,7 +67,7 @@
 }
 
 @media (max-width: 640px) {
-    .quiz-generator__submit {
+    .generator-submit {
         align-self: stretch;
     }
 }

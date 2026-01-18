@@ -61,14 +61,12 @@
     .main {
         grid-template-areas: "quizzes quizzes quizzes quizzes";
     }
-}
 
-@media (max-width: 640px) {
     .quizzes {
         position: relative;
     }
 
-    .quizzes__empty-action {
+    .quiz-empty__action {
         position: absolute;
         bottom: 0;
 

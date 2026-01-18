@@ -32,8 +32,6 @@ const inputJSONHandler = async (event) => {
 
         textarea.classList.add("generator-input-error");
         popupDescription.textContent = response.message;
-
-        console.error(response);
     } else {
         window.location.href = `${BASE_URL}quizzes.html`;
     }

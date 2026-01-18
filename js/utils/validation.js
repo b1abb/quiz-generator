@@ -37,6 +37,7 @@ export const QuestionsSchema = z.object({
     (questions, context) => {
     const ids = questions.options.map((options) => options.id);
     const uni = new Set(ids);
+
     if (uni.size !== ids.length) {
         context.addIssue({
             code: 'custom',
@@ -97,6 +98,7 @@ export const QuizSchema = z.object({
     (quiz, context) => {
     const qIds = quiz.questions.map((q) => q.id);
     const uni = new Set(qIds);
+
     if (uni.size !== qIds.length) {
         context.addIssue({
             code: 'custom',
@@ -109,9 +111,11 @@ export const QuizSchema = z.object({
 export class ValidateQuizJson {
     static validateJson(jsonString) {
         const raw = ValidateQuizJson.#parseJson(jsonString);
+
         if (!raw.ok) return raw;
 
         const parsed = QuizSchema.safeParse(raw.data);
+
         if (parsed.success) {
             return {ok: true, data: parsed.data};
         }
@@ -139,6 +143,7 @@ export class ValidateQuizJson {
 
         try {
             const data = JSON.parse(jsonString);
+
             if (data === null || typeof data !== 'object') {
                 return {
                     ok: false,
@@ -146,6 +151,7 @@ export class ValidateQuizJson {
                     issues: [{path: '', message: 'Ожидается объект, получено null/примитив'}],
                 };
             }
+
             return {ok: true, data};
         } catch (e) {
             return {
@@ -158,6 +164,7 @@ export class ValidateQuizJson {
 
     static #formatIssuesMessage(issues) {
         const first = issues[0];
+
         if (!first) return 'Ошибка валидации';
 
         return first.path ? `${first.path}: ${first.message}` : first.message;

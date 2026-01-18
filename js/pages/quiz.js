@@ -69,6 +69,7 @@ const questionFromURL = (question) => {
 
 const getSelectedOptionId = () => {
     const fd = new FormData(quizQuestionForm);
+
     return Array.from(fd.values()).map((v) => Number(v)).filter((n) => Number.isFinite(n));
 }
 
@@ -94,6 +95,7 @@ const review = (selectedId) => {
 
 const finish = () => {
     const result = quiz.getQuizResult();
+
     if (!result) return;
 
     const views = {
@@ -117,6 +119,7 @@ const finish = () => {
     };
 
     const view = views[result.status];
+
     if (!view) return;
 
     popupTitle.textContent = view.title;
@@ -176,8 +179,12 @@ const renderQuestions = () => {
 const initQuiz = () => {
     const { title, description } = quizData;
 
-    if (quizTitleElement) quizTitleElement.textContent = title;
-    if (quizDescriptionElement) quizDescriptionElement.textContent = description;
+    if (quizTitleElement) {
+        quizTitleElement.textContent = title;
+    }
+    if (quizDescriptionElement) {
+        quizDescriptionElement.textContent = description;
+    }
 
     renderQuestions();
 }
@@ -187,6 +194,7 @@ const handleSubmitForm = (event) => {
 
     if (quiz.getMode() === "answer") {
         const cur = quiz.getCurrentQuestion();
+
         if (!cur) return;
 
         const q = cur.question;
@@ -200,16 +208,19 @@ const handleSubmitForm = (event) => {
         const result = quiz.answeredQuestion(q.id, selectedIds);
 
         review(result.highlightOptionIds);
+
         return;
     }
 
     if (quiz.getMode() === "review") {
         if (quiz.isLastQuestion()) {
             finish();
+
             return;
         }
 
         const next = quiz.getNextQuestion();
+
         if (!next) return;
 
         Router.setQuestion(next.number);
@@ -234,7 +245,7 @@ const handleRestartQuiz = (event) => {
 
 questionFromURL(question);
 initQuiz();
-quizQuestionForm.addEventListener("submit", handleSubmitForm);
 
+quizQuestionForm.addEventListener("submit", handleSubmitForm);
 popupCloseButton.addEventListener("click", handleCloseQuiz);
 popupRestartButton.addEventListener("click", handleRestartQuiz);

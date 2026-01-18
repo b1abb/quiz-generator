@@ -11,7 +11,10 @@ export class QuizGenerator {
 
     async setDataQuiz(dataQuiz) {
         const response = this.validatorQuiz.validateJson(dataQuiz);
-        if (!response.ok) return response;
+
+        if (!response.ok) {
+            return response;
+        }
 
         if (!this.dbQuiz) {
             return {

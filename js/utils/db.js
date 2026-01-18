@@ -25,31 +25,24 @@ export class IndexedDB {
 
     get(collection, key) {
         this.#initializationDB();
+
         return this.#db.get(collection, key);
     }
 
     getAll(collection) {
         this.#initializationDB();
+
         return this.#db.getAll(collection);
     }
 
     put(collection, key, value) {
         this.#initializationDB();
+
         if (key !== undefined) {
             this.#db.put(collection, key, value);
         } else {
             this.#db.put(collection, value);
         }
-    }
-
-    delete(collection, key) {
-        this.#initializationDB();
-        return this.#db.delete(collection, key);
-    }
-
-    clean(collection) {
-        this.#initializationDB();
-        return this.#db.clean(collection);
     }
 
     #initializationDB() {

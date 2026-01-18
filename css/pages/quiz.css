@@ -114,18 +114,16 @@
     .main {
         grid-template-areas: "quiz quiz quiz quiz";
     }
-}
 
-@media (max-width: 640px) {
     .quiz {
         gap: 16px;
     }
 
-    .quiz__form {
+    .quiz__question-form {
         gap: 16px;
     }
 
-    .quiz__submit {
+    .quiz-submit {
         align-self: stretch;
     }
 }

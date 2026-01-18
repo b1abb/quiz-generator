@@ -1,11 +1,11 @@
 .button {
     height: 40px;
-    border: 1px solid;
+    border: solid 1px;
     border-radius: var(--radius-xs);
-    box-sizing: border-box;
-    text-align: center;
     padding: 8px 16px;
     cursor: pointer;
+    box-sizing: border-box;
+    text-align: center;
 }
 
 .button:focus {
