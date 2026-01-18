@@ -24,7 +24,7 @@
 
 .quizzes-list {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(var(--grid-content-columns), minmax(0, 1fr));
     gap: 24px;
     box-sizing: border-box;
 }
@@ -49,4 +49,29 @@
 
 .quiz-empty__action {
     align-self: start;
+}
+
+@media (max-width: 1200px) {
+    .main {
+        grid-template-areas: "quizzes quizzes quizzes quizzes quizzes quizzes quizzes quizzes";
+    }
+}
+
+@media (max-width: 640px) {
+    .main {
+        grid-template-areas: "quizzes quizzes quizzes quizzes";
+    }
+}
+
+@media (max-width: 640px) {
+    .quizzes {
+        position: relative;
+    }
+
+    .quizzes__empty-action {
+        position: absolute;
+        bottom: 0;
+
+        width: 100%;
+    }
 }

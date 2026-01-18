@@ -78,10 +78,10 @@ button, textarea, input, select {
 }
 
 .main {
-    padding: var(--grid-desktop-margin) 0;
+    padding: var(--grid-margin) 0;
     display: grid;
-    grid-template-columns: repeat(var(--grid-desktor-columns), minmax(0, 1fr));
-    gap: var(--grid-desktop-gutter);
+    grid-template-columns: repeat(var(--grid-columns), minmax(0, 1fr));
+    gap: var(--grid-gutter);
     grid-template-areas: ". . main main main main main main main main . .";
     box-sizing: border-box;
 }
@@ -100,4 +100,60 @@ button, textarea, input, select {
     justify-content: center;
     align-items: start;
     color: var(--color-text-secondary);
+}
+
+@media (max-width: 1200px) {
+    :root {
+        --grid-columns: var(--grig-tablet-columns);
+        --grid-content-columns: var(--grid-content-columns-tablet);
+        --grid-gutter: var(--grig-tablet-gutter);
+        --grid-margin: var(--grig-tablet-margin);
+
+        --header-height: 64px;
+        --footer-height: var(--footer-height-tablet);
+    }
+
+    .page {
+        max-width: 704px;
+    }
+
+    .main {
+        grid-template-columns: repeat(var(--grid-columns), minmax(0, 1fr));
+        grid-template-areas: "main main main main main main main main";
+        gap: var(--grid-gutter);
+    }
+}
+
+@media (max-width: 640px) {
+    :root {
+        --grid-columns: var(--grid-mobile-columns);
+        --grid-content-columns: var(--grid-content-columns-mobile);
+        --grid-gutter: var(--grid-mobile-gutter);
+        --grid-margin: var(--grid-mobile-margin);
+
+        --header-height: 64px;
+        --footer-height: var(--footer-height-mobile);
+
+        --font-h1-size: var(--font-h2-size);
+        --font-h1-weight: var(--font-h2-weight);
+        --font-h1-line: var(--font-h2-line);
+
+        --font-h2-size: var(--font-h3-size);
+        --font-h2-weight: var(--font-h3-weight);
+        --font-h2-line: var(--font-h3-line);
+    }
+
+    .page {
+        max-width: 328px;
+    }
+
+    .main {
+        grid-template-columns: repeat(var(--grid-columns), minmax(0, 1fr));
+        grid-template-areas: "main main main main";
+        gap: var(--grid-gutter);
+    }
+
+    .footer {
+        display: none;
+    }
 }

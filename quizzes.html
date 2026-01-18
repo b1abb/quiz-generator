@@ -6,8 +6,8 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0" />
     <title>Ваши квизы</title>
-    <link rel="stylesheet" href="./css/pages/quizzes.css" />
     <link rel="stylesheet" href="./css/base/base.css"/>
+    <link rel="stylesheet" href="./css/pages/quizzes.css" />
     <link rel="stylesheet" href="./css/components/index.css"/>
   </head>
   <body>
@@ -17,6 +17,10 @@
         <img src="assets/logo.svg" alt="logo"/>
       </a>
       <nav class="header__nav"></nav>
+      <button class="header__menu" aria-label="Открыть меню">
+        <img src="assets/threeLines.svg" alt="" class="header__menu-icon header__menu-icon--open" />
+        <img src="assets/cross.svg" alt="" class="header__menu-icon header__menu-icon--close" />
+      </button>
     </header>
     <main class="main">
       <section class="quizzes"></section>

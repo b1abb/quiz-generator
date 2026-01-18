@@ -60,8 +60,17 @@
     --grid-mobile-gutter: 16px;
     --grid-mobile-margin: 16px;
 
+    --grid-content-columns-desktop: 3;
+    --grid-content-columns-tablet: 2;
+    --grid-content-columns-mobile: 1;
+
     --footer-height: 72px;
     --footer-height-desktop: 72px;
     --footer-height-tablet: 64px;
     --footer-height-mobile: 64px;
+
+    --grid-columns: var(--grid-desktor-columns);
+    --grid-content-columns: var(--grid-content-columns-desktop);
+    --grid-gutter: var(--grid-desktop-gutter);
+    --grid-margin: var(--grid-desktop-margin);
 }

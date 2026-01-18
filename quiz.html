@@ -2,17 +2,118 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Прохождение теста</title>
-    <link
-      rel="stylesheet"
-      href="./css/pages/quiz.css" />
+    <link rel="stylesheet" href="./css/base/base.css"/>
+    <link rel="stylesheet" href="./css/pages/quiz.css" />
+    <link rel="stylesheet" href="./css/components/index.css"/>
   </head>
   <body>
-    <script
-      type="module"
-      src="./js/pages/quiz.js"></script>
+  <div class="page">
+    <header class="header">
+      <a class="header header-logo" href="index.html">
+        <img src="assets/logo.svg" alt="logo"/>
+      </a>
+      <nav class="header__nav"></nav>
+      <button class="header__menu" aria-label="Открыть меню">
+        <img src="assets/threeLines.svg" alt="" class="header__menu-icon header__menu-icon--open" />
+        <img src="assets/cross.svg" alt="" class="header__menu-icon header__menu-icon--close" />
+      </button>
+    </header>
+    <main class="main">
+      <section class="quiz">
+        <header class="quiz__header">
+          <h1 class="quiz__title">
+            Квиз: UX-дизайн и пользовательские сценарии
+          </h1>
+          <p class="quiz__description">
+            Квиз о паттернах UX, исследовании пользователей и принципах визуальной иерархии.
+          </p>
+        </header>
+        <div class="quiz__progress-bar">
+          <p class="quiz__progress-bar__text">Вопрос
+            <span class="quiz__progress-bar__current-question">1</span>
+             из
+            <span class="quiz__progress-bar__total-question">7</span>
+          </p>
+          <div class="quiz__progress-bar__progress">
+            <div class="quiz__progress-bar__fill"
+                 role="progressbar"
+                 aria-valuemin="1"
+                 aria-valuenow="1"
+                 aria-valuemax="7"
+                 aria-label="Процесс прохождения"></div>
+          </div>
+        </div>
+        <div class="quiz__question">
+          <header class="quiz__question-header">
+            <h2 class="quiz__question-title" id="question-title">
+              Что из перечисленного является примером user flow?
+            </h2>
+            <p class="quiz__question-description caption">
+              Выберите один вариант ответа
+            </p>
+          </header>
+          <form class="quiz__question-form" name="question-form">
+            <ul class="quiz__question-options" role="list">
+
+            </ul>
+            <button class="button button-primary quiz-submit" type="submit">Ответить</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      Учебный проект 2026
+    </footer>
+  </div>
+  <template id="quiz__option">
+    <li class="quiz__option">
+      <label class="choice">
+        <input class="choice__input" type="checkbox" name="answer" value="1"/>
+        <span class="choice__box" aria-hidden="true"></span>
+        <span class="choice__label">Вопрос квиза</span>
+      </label>
+    </li>
+  </template>
+  <template id="quiz__option-answer">
+    <li class="quiz__option">
+      <label class="choice">
+        <input class="choice__input" type="checkbox" name="answer" value="1"/>
+        <span class="choice__box" aria-hidden="true"></span>
+        <span class="choice__label">Вопрос квиза</span>
+      </label>
+      <span class="choice__tip caption">Текст-пояснение</span>
+    </li>
+  </template>
+  <div class="popup">
+    <div class="popup-passing__overlay">
+      <div class="popup__content">
+        <div class="popup__header">
+          <h2 class="popup__title">
+            Тест завершён!
+          </h2>
+          <p class="popup__subtitle">
+            Вы ответили правильно на все вопросы 🎉
+          </p>
+        </div>
+        <div class="popup__body">
+          <p class="popup__description caption">
+            Ваши знания в UX-дизайне на высоте — вы уверенно разбираетесь в пользовательских сценариях
+            и принципах проектирования интерфейсов.
+          </p>
+        </div>
+        <div class="popup__footer">
+          <button class="button button-primary popup--close-button" type="submit">
+            К списку квизов
+          </button>
+          <button class="button button-secondary popup--restart-button" type="submit">
+            Пройти снова
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="./js/pages/quiz.js"></script>
   </body>
 </html>

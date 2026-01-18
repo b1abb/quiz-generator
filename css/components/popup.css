@@ -47,3 +47,16 @@
 .popup--open {
     display: flex;
 }
+
+.popup-passing__overlay {
+    width: min(550px, 100%);
+    max-height: calc(100vh - (16px * 2));
+    overflow: auto;
+    border-radius: var(--radius-s);
+    box-shadow: var(--shadow-e3);
+    background-color: var(--color-surface);
+    padding: 16px 20px;
+    box-sizing: border-box;
+}
+
+.popup__subtitle {}

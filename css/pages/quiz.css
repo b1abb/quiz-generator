@@ -1,0 +1,131 @@
+.quiz {
+    grid-area: quiz;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 24px;
+}
+
+.quiz__header {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.quiz__description {
+    color: var(--color-text-secondary);
+}
+
+.quiz__title {}
+
+.quiz__progress-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.quiz__progress-bar__text {
+    color: var(--color-text-secondary);
+}
+
+.quiz__progress-bar__current-question {}
+
+.quiz__progress-bar__total-question {}
+
+.quiz__progress-bar__progress {
+    height: 8px;
+    border-radius: 999px;
+    background: var(--color-border);
+    overflow: hidden;
+}
+
+.quiz__progress-bar__fill {
+    height: 100%;
+    width: 0;
+    background: var(--color-main);
+    border-radius: inherit;
+    transition: width 0.3s;
+}
+
+.quiz__question {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 24px;
+}
+
+.quiz__question-header {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.quiz__question-title {}
+
+.quiz__question-description {
+    color: var(--color-text-secondary);
+}
+
+.quiz__question-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 24px;
+}
+
+.quiz__question-form--locked .choice {
+    pointer-events: none;
+}
+
+.quiz__question-options {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+}
+
+.quiz__question-option {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+}
+
+.quiz-submit {
+    align-self: start;
+}
+
+.main {
+    grid-template-areas: ". . quiz quiz quiz quiz quiz quiz quiz quiz . .";
+}
+
+@media (max-width: 1200px) {
+    .main {
+        grid-template-areas: "quiz quiz quiz quiz quiz quiz quiz quiz";
+    }
+}
+
+@media (max-width: 640px) {
+    .main {
+        grid-template-areas: "quiz quiz quiz quiz";
+    }
+}
+
+@media (max-width: 640px) {
+    .quiz {
+        gap: 16px;
+    }
+
+    .quiz__form {
+        gap: 16px;
+    }
+
+    .quiz__submit {
+        align-self: stretch;
+    }
+}

@@ -15,7 +15,7 @@ export async function addQuiz(quiz) {
 
 export async function getQuiz(id) {
     const db = await dbPromise;
-    return db.getAll(QUIZZES_ENTITY, id);
+    return db.get(QUIZZES_ENTITY, id);
 }
 
 export async function getAllQuizzes() {

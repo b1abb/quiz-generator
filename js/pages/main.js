@@ -13,7 +13,7 @@ const popupButton = document.querySelector('.popup__button');
 const header = new Header();
 const quizGenerator = new QuizGenerator(ValidateQuizJson, addQuiz);
 
-header.setButtonItems([{text: "Посмотреть сохранённые квизы", href: `${BASE_URL}quizzes.html`, variant: "secondary"}])
+header.setButtonItems([{text: "Посмотреть сохранённые квизы", href: `${BASE_URL}quizzes.html`, variant: "secondary"}]);
 
 const popupCloseHandler = () => {
     popup.classList.remove("popup--open");
